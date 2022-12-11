@@ -39,6 +39,26 @@ For example, some of the math concepts that may be covered by this coursera cour
 To my future self: Coding is another apparent barrier to my ability to wrangle data, visual presentation, and present data, so might be a good idea signing up for [a python course](https://extendedlearning.ubc.ca/programs/introduction-systematic-program-design-python). 
 ```
 
+## Reference to figures & equations 
+For ease of reference:
+**Equations**
+- Equation [](inflation-adjustment)
+- Equation [](index-calc)
+- Equation [](revenue)
+- Equation [](net-revenue)
+- Equation [](stop_cal)
+- Equation [](diameter_cal)
+
+**Figures**
+- Figure [](python-logo)
+- Figure [](disney-logo)
+- Figure [](disney-brands)
+- Figure [](disney-interactive)
+- Figure [](snowwhite)
+- Figure [](lionking)
+- Figure [](toolbox_logo)
+- Figure [](fireworks)
+
 ## End of Jupyter Book
 This page also concludes the end of this Jupyter Book, as final project for the Data Science Toolbox course. 
 
@@ -47,16 +67,16 @@ This page also concludes the end of this Jupyter Book, as final project for the 
 height: 250px
 name: toolbox_logo
 ---
-Toolbox Course Logo.
+Toolbox Course Logo.[Logo source](https://toolbox-learn.mds.ubc.ca/en/).
 ```
-[Logo source](https://toolbox-learn.mds.ubc.ca/en/).
 
 ```{figure} fireworks.jpeg
 ---
 height: 300px
 name: fireworks
 ---
-Yay done!!.
+Yay done!!
+[Figure source](https://www.porthope.ca/en/living-here/fireworks.aspx).
 ```
-[Logo source](https://www.porthope.ca/en/living-here/fireworks.aspx).
+
 

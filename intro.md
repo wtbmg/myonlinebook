@@ -4,21 +4,21 @@ This Jupyter Book is the re-formatting and GitHub Publication of my previous UBC
 
 ## Requirements checklist
 - Markdown file 1: 
-{doc}`../markdown1.md`
+See [](markdown1.md)
   - 2 block math equations 👌
   - 2 code blocks 👌
   - 2 image files (must be properly numbered) 👌
   - 2 admonitions 👌
   - 1 margin content 👌
 - Markdown file 2: 
-{doc}`../markdown2.md`
+See [](markdown2.md)
   - 2 block math equations
   - 2 code blocks 👌
   - 2 image files (must be properly numbered)  👌
   - 2 admonitions 👌
   - 1 margin content 👌
 - Jupyter Notebook 1: 
-{doc}`../notebook1.ipynb`
+See [](notebook1.ipynb)
   - 5 Markdown cells with a total of at least
     - 2 block math equations (must be properly numbered) 👌
     - 2 code blocks 👌
@@ -26,14 +26,14 @@ This Jupyter Book is the re-formatting and GitHub Publication of my previous UBC
   - 5 executable code cells 👌
   - 2 plots generated using 2 (additional) hidden code cells 👌
 - Jupyter Notebook 2: 
-{doc}`../notebook2.ipynb`
+See [](notebook2.ipynb)
   - 5 Markdown cells with a total of at least
     - 2 block math equations (must be properly numbered)👌
     - 2 code blocks 👌
     - 2 image files 👌
   - 5 executable code cells 👌
   - 2 plots generated using 2 (additional) hidden code cells 👌
-- You should cross-reference your sections, figures, or equations at least 10 times in total - 1 time completed. 
+- You should cross-reference your sections, figures, or equations at least 10 times in total - 5 time completed. 
 - Your Jupyter Book should contain at least 5 citations in total, and a bibliography.
 - Git and GitHub
   - You should make at least 10 commits in total
