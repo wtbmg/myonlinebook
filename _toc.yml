@@ -1,0 +1,15 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+title: Introduction & Project Checklist
+chapters:
+- file: markdown1
+  title: Dataset Description & Questions of Interests
+- file: notebook1
+  title: Question1 and Analysis
+- file: notebook2
+  title: Question2 and Analysis
+- file: markdown2
+  title: Conclusions
