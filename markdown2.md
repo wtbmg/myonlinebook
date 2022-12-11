@@ -39,6 +39,11 @@ For example, some of the math concepts that may be covered by this coursera cour
 To my future self: Coding is another apparent barrier to my ability to wrangle data, visual presentation, and present data, so might be a good idea signing up for [a python course](https://extendedlearning.ubc.ca/programs/introduction-systematic-program-design-python). 
 ```
 
+## Bibliography
+```{bibliography} references.bib
+:all:
+```
+
 ## Reference to figures & equations 
 For ease of reference:
 **Equations**

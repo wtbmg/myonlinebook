@@ -26,7 +26,7 @@ This dataset focuses on Disney.
 Disney logo source: [Wikipedia](https://en.wikipedia.org/wiki/Disney_logo)
 
 
-The dataset has 5 tables, all accessed from [a Disney project on character success](https://data.world/kgarrett/disney-character-success-00-16). Below, information in quotes were taken directly from the[this project's analysis report](https://data.world/kgarrett/disney-character-success-00-16/workspace/file?filename=DisneyReport.pdf). 
+The dataset has 5 tables, all accessed from [a Disney project on character success](https://data.world/kgarrett/disney-character-success-00-16). Below, information in quotes were taken directly from [this project's analysis report](https://data.world/kgarrett/disney-character-success-00-16/workspace/file?filename=DisneyReport.pdf), {cite:p}`Gar18`. 
 
 - NOT USED FOR ANALYSIS **disney-characters.csv**:'provides a list of Disney animated movies and the hero/villain character names in each movie.' It has these columns: 'movie_title', 'release_date', 'hero', 'villain', and 'song.'
 - **disney_movies_total_gross.csv**: 'provides a list of Disney movies, and their genre, gross, and MPAA ratings.' The .csv also includes inflation_adjusted_gross as the release dates span a few decades from 1937 to 2016.

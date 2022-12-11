@@ -33,7 +33,7 @@ See [](notebook2.ipynb)
     - 2 image files 👌
   - 5 executable code cells 👌
   - 2 plots generated using 2 (additional) hidden code cells 👌
-- You should cross-reference your sections, figures, or equations at least 10 times in total - 5 time completed. 
+- You should cross-reference your sections, figures, or equations at least 10 times in total 👌 
 - Your Jupyter Book should contain at least 5 citations in total, and a bibliography.
 - Git and GitHub
   - You should make at least 10 commits in total
