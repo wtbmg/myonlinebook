@@ -74,7 +74,7 @@ def test_custom_filter():
 
 
 :::{seealso}
-One of the columns utilized in the dataset is **inflation adjusted gross**. The dataset does not have any details on how they arrived at those numbers. I wanted to look up the formula commonly used for inflation adjustment just for context. Based on this [source](https://timeseriesreasoning.com/contents/inflation-adjustment/), below are the equations re-produced based on the source, that can be used to adjust for example, income, by inflation, as well as how the index value (in this case CPI) is calculated.
+One of the columns utilized in the dataset is **inflation adjusted gross**. The dataset does not have any details on how they arrived at those numbers. I wanted to look up the formula commonly used for inflation adjustment just for context. Based on this [source](https://timeseriesreasoning.com/contents/inflation-adjustment/) {cite:p}`Sac21`, below are the equations re-produced based on the source, that can be used to adjust for example, income, by inflation, as well as how the index value (in this case CPI) is calculated.
 :::
 
 
