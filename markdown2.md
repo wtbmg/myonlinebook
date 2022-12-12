@@ -65,7 +65,7 @@ For ease of reference:
 - Figure [](fireworks)
 
 ## End of Jupyter Book
-This page also concludes the end of this Jupyter Book, as final project for the Data Science Toolbox course. 
+This page also concludes the end of this Jupyter Book. 
 
 ```{figure} toolbox_logo.PNG
 ---
