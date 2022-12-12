@@ -1,0 +1,1358 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Question 2 &#8212; Python for Data Science Course Final Project</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Conclusions" href="markdown2.html" />
+    <link rel="prev" title="Question 1" href="notebook1.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Python for Data Science Course Final Project</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Python for Data Science Course Final Project
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown1.html">
+   Dataset Description &amp; Questions of Interests
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebook1.html">
+   Question1 and Analysis
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Question2 and Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown2.html">
+   Conclusions
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/notebook2.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebook2.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/notebook2.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Question 2</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="question-2">
+<h1>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">#</a></h1>
+<p>Based on existing data, on average, have movies become more or less revenue generating over time based on inflation-adjusted gross? Which directors are featured in top 10 G-rated inflation-adjusted gross movies in the last half century (1972 - 2022)?</p>
+<p><strong>Methods and Results</strong></p>
+<p>To answer Q2:
+use dateime to year to group gross by year; used data frames disney-director.csv, and disney_movie_total_gross.csv.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import data, datetime as datetime </span>
+<span class="n">dm_total_gross</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/disney_movies_total_gross.csv&#39;</span><span class="p">,</span> <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;release_date&#39;</span><span class="p">])</span>
+
+<span class="n">dm_total_gross</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 579 entries, 0 to 578
+Data columns (total 6 columns):
+ #   Column                    Non-Null Count  Dtype         
+---  ------                    --------------  -----         
+ 0   movie_title               579 non-null    object        
+ 1   release_date              579 non-null    datetime64[ns]
+ 2   genre                     562 non-null    object        
+ 3   MPAA_rating               523 non-null    object        
+ 4   total_gross               579 non-null    object        
+ 5   inflation_adjusted_gross  579 non-null    object        
+dtypes: datetime64[ns](1), object(5)
+memory usage: 27.3+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<p>In data wrangling, we noticed below that some columns include special characters and/or may not be of the type we need for mathematical calculations. In lieu of dealing with them column by column, we could write a function to do the stripping and type re-assignment for us.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">replace_char</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">special_character</span><span class="p">):</span>
+    <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+    <span class="n">df_after</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">col</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;col&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;special_character&#39;</span><span class="p">))</span>
+    
+    <span class="k">return</span> <span class="n">df_after</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">coltype_chg</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">col_type</span><span class="p">):</span>
+    <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+    <span class="n">df_after</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">col</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;col&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;col_type&#39;</span><span class="p">))</span>
+    
+    <span class="k">return</span> <span class="n">df_after</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># strip the $ sign from gross, remove &#39;,&#39; &amp; set appropriate datatypes for columns so calculation can be done property </span>
+<span class="n">dm_total_gross</span> <span class="o">=</span> <span class="n">dm_total_gross</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">total_gross</span> <span class="o">=</span> <span class="n">dm_total_gross</span><span class="p">[</span><span class="s1">&#39;total_gross&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;$&#39;</span><span class="p">))</span>
+<span class="n">dm_total_gross</span> <span class="o">=</span> <span class="n">dm_total_gross</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">inflation_adjusted_gross</span> <span class="o">=</span> <span class="n">dm_total_gross</span><span class="p">[</span><span class="s1">&#39;inflation_adjusted_gross&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;$&#39;</span><span class="p">))</span>
+<span class="n">dm_total_gross</span> <span class="o">=</span> <span class="n">dm_total_gross</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">total_gross</span> <span class="o">=</span> <span class="n">dm_total_gross</span><span class="p">[</span><span class="s1">&#39;total_gross&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">))</span>
+<span class="n">dm_total_gross</span> <span class="o">=</span> <span class="n">dm_total_gross</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">inflation_adjusted_gross</span> <span class="o">=</span> <span class="n">dm_total_gross</span><span class="p">[</span><span class="s1">&#39;inflation_adjusted_gross&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">))</span>
+
+<span class="n">dm_total_gross</span> <span class="o">=</span> <span class="n">dm_total_gross</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">total_gross</span> <span class="o">=</span> <span class="n">dm_total_gross</span><span class="p">[</span><span class="s1">&#39;total_gross&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float&#39;</span><span class="p">))</span>
+<span class="n">dm_total_gross</span> <span class="o">=</span> <span class="n">dm_total_gross</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">inflation_adjusted_gross</span> <span class="o">=</span> <span class="n">dm_total_gross</span><span class="p">[</span><span class="s1">&#39;inflation_adjusted_gross&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dm_total_gross</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>movie_title</th>
+      <th>release_date</th>
+      <th>genre</th>
+      <th>MPAA_rating</th>
+      <th>total_gross</th>
+      <th>inflation_adjusted_gross</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Snow White and the Seven Dwarfs</td>
+      <td>1937-12-21</td>
+      <td>Musical</td>
+      <td>G</td>
+      <td>184925485.0</td>
+      <td>5.228953e+09</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Pinocchio</td>
+      <td>1940-02-09</td>
+      <td>Adventure</td>
+      <td>G</td>
+      <td>84300000.0</td>
+      <td>2.188229e+09</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Fantasia</td>
+      <td>1940-11-13</td>
+      <td>Musical</td>
+      <td>G</td>
+      <td>83320000.0</td>
+      <td>2.187091e+09</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Song of the South</td>
+      <td>1946-11-12</td>
+      <td>Adventure</td>
+      <td>G</td>
+      <td>65000000.0</td>
+      <td>1.078511e+09</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Cinderella</td>
+      <td>1950-02-15</td>
+      <td>Drama</td>
+      <td>G</td>
+      <td>85000000.0</td>
+      <td>9.206087e+08</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># since we are comparing by year, need to assign a new column with the year of the movie release; set the display for float format so the data is more readable by human(me)</span>
+<span class="n">dm_total_gross</span> <span class="o">=</span> <span class="n">dm_total_gross</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">release_year</span> <span class="o">=</span> <span class="n">dm_total_gross</span><span class="p">[</span><span class="s1">&#39;release_date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.float_format&#39;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">%.2f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">dm_total_gross</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>movie_title</th>
+      <th>release_date</th>
+      <th>genre</th>
+      <th>MPAA_rating</th>
+      <th>total_gross</th>
+      <th>inflation_adjusted_gross</th>
+      <th>release_year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Snow White and the Seven Dwarfs</td>
+      <td>1937-12-21</td>
+      <td>Musical</td>
+      <td>G</td>
+      <td>184925485.00</td>
+      <td>5228953251.00</td>
+      <td>1937</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Pinocchio</td>
+      <td>1940-02-09</td>
+      <td>Adventure</td>
+      <td>G</td>
+      <td>84300000.00</td>
+      <td>2188229052.00</td>
+      <td>1940</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Fantasia</td>
+      <td>1940-11-13</td>
+      <td>Musical</td>
+      <td>G</td>
+      <td>83320000.00</td>
+      <td>2187090808.00</td>
+      <td>1940</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Song of the South</td>
+      <td>1946-11-12</td>
+      <td>Adventure</td>
+      <td>G</td>
+      <td>65000000.00</td>
+      <td>1078510579.00</td>
+      <td>1946</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Cinderella</td>
+      <td>1950-02-15</td>
+      <td>Drama</td>
+      <td>G</td>
+      <td>85000000.00</td>
+      <td>920608730.00</td>
+      <td>1950</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">year_mean</span> <span class="o">=</span> <span class="n">dm_total_gross</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;release_year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">year_count</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">dm_total_gross</span><span class="p">[</span><span class="s1">&#39;release_year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;release_year&#39;</span><span class="p">:</span><span class="s1">&#39;movie_count&#39;</span><span class="p">,</span> <span class="s1">&#39;index&#39;</span><span class="p">:</span><span class="s1">&#39;release_year&#39;</span><span class="p">})</span>
+
+<span class="n">merged</span> <span class="o">=</span> <span class="n">year_mean</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">year_count</span><span class="p">,</span><span class="n">on</span> <span class="o">=</span> <span class="s1">&#39;release_year&#39;</span><span class="p">)</span>
+<span class="n">merged</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>release_year</th>
+      <th>total_gross</th>
+      <th>inflation_adjusted_gross</th>
+      <th>movie_count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1937</td>
+      <td>184925485.00</td>
+      <td>5228953251.00</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1940</td>
+      <td>83810000.00</td>
+      <td>2187659930.00</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1946</td>
+      <td>65000000.00</td>
+      <td>1078510579.00</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1950</td>
+      <td>85000000.00</td>
+      <td>920608730.00</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1954</td>
+      <td>28200000.00</td>
+      <td>528279994.00</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Below is a plot demostraing the yearly movie gross mean</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot the yearly movie gross mean</span>
+<span class="n">plot_ym</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">merged</span><span class="p">)</span><span class="o">.</span><span class="n">mark_line</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;release_year&#39;</span><span class="p">,</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;inflation_adjusted_gross&#39;</span><span class="p">)</span>
+<span class="n">plot_ym</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-8a096a02e2ef405e8265bcd3ab341f33"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-8a096a02e2ef405e8265bcd3ab341f33") {
+      outputDiv = document.getElementById("altair-viz-8a096a02e2ef405e8265bcd3ab341f33");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.17.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "4.17.0"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-a57f97fed9a9e648102de58ed953fce0"}, "mark": "line", "encoding": {"x": {"field": "release_year", "type": "quantitative"}, "y": {"field": "inflation_adjusted_gross", "type": "quantitative"}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-a57f97fed9a9e648102de58ed953fce0": [{"release_year": 1937, "total_gross": 184925485.0, "inflation_adjusted_gross": 5228953251.0, "movie_count": 1}, {"release_year": 1940, "total_gross": 83810000.0, "inflation_adjusted_gross": 2187659930.0, "movie_count": 2}, {"release_year": 1946, "total_gross": 65000000.0, "inflation_adjusted_gross": 1078510579.0, "movie_count": 1}, {"release_year": 1950, "total_gross": 85000000.0, "inflation_adjusted_gross": 920608730.0, "movie_count": 1}, {"release_year": 1954, "total_gross": 28200000.0, "inflation_adjusted_gross": 528279994.0, "movie_count": 1}, {"release_year": 1955, "total_gross": 93600000.0, "inflation_adjusted_gross": 1236035515.0, "movie_count": 1}, {"release_year": 1959, "total_gross": 9464608.0, "inflation_adjusted_gross": 21505832.0, "movie_count": 1}, {"release_year": 1961, "total_gross": 62866574.333333336, "inflation_adjusted_gross": 599268906.3333334, "movie_count": 3}, {"release_year": 1962, "total_gross": 9230769.0, "inflation_adjusted_gross": 109581646.0, "movie_count": 1}, {"release_year": 1963, "total_gross": 22182353.0, "inflation_adjusted_gross": 153870834.0, "movie_count": 1}, {"release_year": 1967, "total_gross": 141843000.0, "inflation_adjusted_gross": 789612346.0, "movie_count": 1}, {"release_year": 1968, "total_gross": 21540050.0, "inflation_adjusted_gross": 138612686.0, "movie_count": 1}, {"release_year": 1970, "total_gross": 37141374.5, "inflation_adjusted_gross": 178181120.5, "movie_count": 2}, {"release_year": 1971, "total_gross": 17871174.0, "inflation_adjusted_gross": 91305448.0, "movie_count": 1}, {"release_year": 1975, "total_gross": 31916500.0, "inflation_adjusted_gross": 131246872.0, "movie_count": 1}, {"release_year": 1977, "total_gross": 25679399.75, "inflation_adjusted_gross": 90914793.5, "movie_count": 4}, {"release_year": 1979, "total_gross": 35841901.0, "inflation_adjusted_gross": 120377374.0, "movie_count": 1}, {"release_year": 1980, "total_gross": 6950000.0, "inflation_adjusted_gross": 21780106.0, "movie_count": 2}, {"release_year": 1981, "total_gross": 14974807.75, "inflation_adjusted_gross": 45409217.25, "movie_count": 4}, {"release_year": 1982, "total_gross": 12872661.333333334, "inflation_adjusted_gross": 36910384.333333336, "movie_count": 3}, {"release_year": 1983, "total_gross": 9708433.0, "inflation_adjusted_gross": 25137383.5, "movie_count": 4}, {"release_year": 1984, "total_gross": 35499747.5, "inflation_adjusted_gross": 89066330.5, "movie_count": 2}, {"release_year": 1985, "total_gross": 12163604.333333334, "inflation_adjusted_gross": 28854035.333333332, "movie_count": 6}, {"release_year": 1986, "total_gross": 36360465.428571425, "inflation_adjusted_gross": 82496058.28571428, "movie_count": 7}, {"release_year": 1987, "total_gross": 56020881.3, "inflation_adjusted_gross": 118664996.9, "movie_count": 10}, {"release_year": 1988, "total_gross": 39927441.5, "inflation_adjusted_gross": 82236822.25, "movie_count": 12}, {"release_year": 1989, "total_gross": 47767937.27272727, "inflation_adjusted_gross": 99804658.27272727, "movie_count": 11}, {"release_year": 1990, "total_gross": 40923803.733333334, "inflation_adjusted_gross": 81764049.66666667, "movie_count": 15}, {"release_year": 1991, "total_gross": 40440646.25, "inflation_adjusted_gross": 76324377.0, "movie_count": 16}, {"release_year": 1992, "total_gross": 38842470.63636363, "inflation_adjusted_gross": 78924993.68181819, "movie_count": 22}, {"release_year": 1993, "total_gross": 25987115.14814815, "inflation_adjusted_gross": 52863443.7037037, "movie_count": 27}, {"release_year": 1994, "total_gross": 36408501.0, "inflation_adjusted_gross": 71356360.23333333, "movie_count": 30}, {"release_year": 1995, "total_gross": 35373884.1875, "inflation_adjusted_gross": 68393720.09375, "movie_count": 32}, {"release_year": 1996, "total_gross": 40501597.178571425, "inflation_adjusted_gross": 77044249.96428572, "movie_count": 28}, {"release_year": 1997, "total_gross": 34939872.43478261, "inflation_adjusted_gross": 64123827.56521739, "movie_count": 23}, {"release_year": 1998, "total_gross": 55876325.77272727, "inflation_adjusted_gross": 99501418.5909091, "movie_count": 22}, {"release_year": 1999, "total_gross": 57156768.71428572, "inflation_adjusted_gross": 94361085.66666667, "movie_count": 21}, {"release_year": 2000, "total_gross": 57838406.15789474, "inflation_adjusted_gross": 90088204.84210527, "movie_count": 19}, {"release_year": 2001, "total_gross": 62946198.85714286, "inflation_adjusted_gross": 92592270.07142857, "movie_count": 14}, {"release_year": 2002, "total_gross": 52694048.22727273, "inflation_adjusted_gross": 76390894.36363636, "movie_count": 22}, {"release_year": 2003, "total_gross": 82321810.15789473, "inflation_adjusted_gross": 114276043.5263158, "movie_count": 19}, {"release_year": 2004, "total_gross": 60942098.89473684, "inflation_adjusted_gross": 82643113.68421052, "movie_count": 19}, {"release_year": 2005, "total_gross": 57096873.058823526, "inflation_adjusted_gross": 74940155.23529412, "movie_count": 17}, {"release_year": 2006, "total_gross": 75124051.26315789, "inflation_adjusted_gross": 96565513.84210527, "movie_count": 19}, {"release_year": 2007, "total_gross": 102627696.71428572, "inflation_adjusted_gross": 125534267.07142857, "movie_count": 14}, {"release_year": 2008, "total_gross": 74482777.61538461, "inflation_adjusted_gross": 87335096.53846154, "movie_count": 13}, {"release_year": 2009, "total_gross": 75946422.0625, "inflation_adjusted_gross": 84994288.5625, "movie_count": 16}, {"release_year": 2010, "total_gross": 108498277.14285715, "inflation_adjusted_gross": 115895368.5, "movie_count": 14}, {"release_year": 2011, "total_gross": 78800504.85714285, "inflation_adjusted_gross": 83755638.71428572, "movie_count": 14}, {"release_year": 2012, "total_gross": 145297205.7, "inflation_adjusted_gross": 153766913.4, "movie_count": 10}, {"release_year": 2013, "total_gross": 165577460.9090909, "inflation_adjusted_gross": 171623959.8181818, "movie_count": 11}, {"release_year": 2014, "total_gross": 126181622.75, "inflation_adjusted_gross": 130065943.16666667, "movie_count": 12}, {"release_year": 2015, "total_gross": 226878426.9090909, "inflation_adjusted_gross": 226878426.9090909, "movie_count": 11}, {"release_year": 2016, "total_gross": 205242364.64285713, "inflation_adjusted_gross": 205242364.64285713, "movie_count": 14}]}}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p>Below is a plot demonstrating the yearly movie produced sum</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_mc</span> <span class="o">=</span> <span class="n">plot_ym</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">merged</span><span class="p">)</span><span class="o">.</span><span class="n">mark_bar</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;release_year&#39;</span><span class="p">,</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;movie_count&#39;</span><span class="p">)</span>
+<span class="n">plot_mc</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-75a8d94746a04508b027275dc9c61f64"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-75a8d94746a04508b027275dc9c61f64") {
+      outputDiv = document.getElementById("altair-viz-75a8d94746a04508b027275dc9c61f64");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.17.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "4.17.0"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-a57f97fed9a9e648102de58ed953fce0"}, "mark": "bar", "encoding": {"x": {"field": "release_year", "type": "quantitative"}, "y": {"field": "movie_count", "type": "quantitative"}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-a57f97fed9a9e648102de58ed953fce0": [{"release_year": 1937, "total_gross": 184925485.0, "inflation_adjusted_gross": 5228953251.0, "movie_count": 1}, {"release_year": 1940, "total_gross": 83810000.0, "inflation_adjusted_gross": 2187659930.0, "movie_count": 2}, {"release_year": 1946, "total_gross": 65000000.0, "inflation_adjusted_gross": 1078510579.0, "movie_count": 1}, {"release_year": 1950, "total_gross": 85000000.0, "inflation_adjusted_gross": 920608730.0, "movie_count": 1}, {"release_year": 1954, "total_gross": 28200000.0, "inflation_adjusted_gross": 528279994.0, "movie_count": 1}, {"release_year": 1955, "total_gross": 93600000.0, "inflation_adjusted_gross": 1236035515.0, "movie_count": 1}, {"release_year": 1959, "total_gross": 9464608.0, "inflation_adjusted_gross": 21505832.0, "movie_count": 1}, {"release_year": 1961, "total_gross": 62866574.333333336, "inflation_adjusted_gross": 599268906.3333334, "movie_count": 3}, {"release_year": 1962, "total_gross": 9230769.0, "inflation_adjusted_gross": 109581646.0, "movie_count": 1}, {"release_year": 1963, "total_gross": 22182353.0, "inflation_adjusted_gross": 153870834.0, "movie_count": 1}, {"release_year": 1967, "total_gross": 141843000.0, "inflation_adjusted_gross": 789612346.0, "movie_count": 1}, {"release_year": 1968, "total_gross": 21540050.0, "inflation_adjusted_gross": 138612686.0, "movie_count": 1}, {"release_year": 1970, "total_gross": 37141374.5, "inflation_adjusted_gross": 178181120.5, "movie_count": 2}, {"release_year": 1971, "total_gross": 17871174.0, "inflation_adjusted_gross": 91305448.0, "movie_count": 1}, {"release_year": 1975, "total_gross": 31916500.0, "inflation_adjusted_gross": 131246872.0, "movie_count": 1}, {"release_year": 1977, "total_gross": 25679399.75, "inflation_adjusted_gross": 90914793.5, "movie_count": 4}, {"release_year": 1979, "total_gross": 35841901.0, "inflation_adjusted_gross": 120377374.0, "movie_count": 1}, {"release_year": 1980, "total_gross": 6950000.0, "inflation_adjusted_gross": 21780106.0, "movie_count": 2}, {"release_year": 1981, "total_gross": 14974807.75, "inflation_adjusted_gross": 45409217.25, "movie_count": 4}, {"release_year": 1982, "total_gross": 12872661.333333334, "inflation_adjusted_gross": 36910384.333333336, "movie_count": 3}, {"release_year": 1983, "total_gross": 9708433.0, "inflation_adjusted_gross": 25137383.5, "movie_count": 4}, {"release_year": 1984, "total_gross": 35499747.5, "inflation_adjusted_gross": 89066330.5, "movie_count": 2}, {"release_year": 1985, "total_gross": 12163604.333333334, "inflation_adjusted_gross": 28854035.333333332, "movie_count": 6}, {"release_year": 1986, "total_gross": 36360465.428571425, "inflation_adjusted_gross": 82496058.28571428, "movie_count": 7}, {"release_year": 1987, "total_gross": 56020881.3, "inflation_adjusted_gross": 118664996.9, "movie_count": 10}, {"release_year": 1988, "total_gross": 39927441.5, "inflation_adjusted_gross": 82236822.25, "movie_count": 12}, {"release_year": 1989, "total_gross": 47767937.27272727, "inflation_adjusted_gross": 99804658.27272727, "movie_count": 11}, {"release_year": 1990, "total_gross": 40923803.733333334, "inflation_adjusted_gross": 81764049.66666667, "movie_count": 15}, {"release_year": 1991, "total_gross": 40440646.25, "inflation_adjusted_gross": 76324377.0, "movie_count": 16}, {"release_year": 1992, "total_gross": 38842470.63636363, "inflation_adjusted_gross": 78924993.68181819, "movie_count": 22}, {"release_year": 1993, "total_gross": 25987115.14814815, "inflation_adjusted_gross": 52863443.7037037, "movie_count": 27}, {"release_year": 1994, "total_gross": 36408501.0, "inflation_adjusted_gross": 71356360.23333333, "movie_count": 30}, {"release_year": 1995, "total_gross": 35373884.1875, "inflation_adjusted_gross": 68393720.09375, "movie_count": 32}, {"release_year": 1996, "total_gross": 40501597.178571425, "inflation_adjusted_gross": 77044249.96428572, "movie_count": 28}, {"release_year": 1997, "total_gross": 34939872.43478261, "inflation_adjusted_gross": 64123827.56521739, "movie_count": 23}, {"release_year": 1998, "total_gross": 55876325.77272727, "inflation_adjusted_gross": 99501418.5909091, "movie_count": 22}, {"release_year": 1999, "total_gross": 57156768.71428572, "inflation_adjusted_gross": 94361085.66666667, "movie_count": 21}, {"release_year": 2000, "total_gross": 57838406.15789474, "inflation_adjusted_gross": 90088204.84210527, "movie_count": 19}, {"release_year": 2001, "total_gross": 62946198.85714286, "inflation_adjusted_gross": 92592270.07142857, "movie_count": 14}, {"release_year": 2002, "total_gross": 52694048.22727273, "inflation_adjusted_gross": 76390894.36363636, "movie_count": 22}, {"release_year": 2003, "total_gross": 82321810.15789473, "inflation_adjusted_gross": 114276043.5263158, "movie_count": 19}, {"release_year": 2004, "total_gross": 60942098.89473684, "inflation_adjusted_gross": 82643113.68421052, "movie_count": 19}, {"release_year": 2005, "total_gross": 57096873.058823526, "inflation_adjusted_gross": 74940155.23529412, "movie_count": 17}, {"release_year": 2006, "total_gross": 75124051.26315789, "inflation_adjusted_gross": 96565513.84210527, "movie_count": 19}, {"release_year": 2007, "total_gross": 102627696.71428572, "inflation_adjusted_gross": 125534267.07142857, "movie_count": 14}, {"release_year": 2008, "total_gross": 74482777.61538461, "inflation_adjusted_gross": 87335096.53846154, "movie_count": 13}, {"release_year": 2009, "total_gross": 75946422.0625, "inflation_adjusted_gross": 84994288.5625, "movie_count": 16}, {"release_year": 2010, "total_gross": 108498277.14285715, "inflation_adjusted_gross": 115895368.5, "movie_count": 14}, {"release_year": 2011, "total_gross": 78800504.85714285, "inflation_adjusted_gross": 83755638.71428572, "movie_count": 14}, {"release_year": 2012, "total_gross": 145297205.7, "inflation_adjusted_gross": 153766913.4, "movie_count": 10}, {"release_year": 2013, "total_gross": 165577460.9090909, "inflation_adjusted_gross": 171623959.8181818, "movie_count": 11}, {"release_year": 2014, "total_gross": 126181622.75, "inflation_adjusted_gross": 130065943.16666667, "movie_count": 12}, {"release_year": 2015, "total_gross": 226878426.9090909, "inflation_adjusted_gross": 226878426.9090909, "movie_count": 11}, {"release_year": 2016, "total_gross": 205242364.64285713, "inflation_adjusted_gross": 205242364.64285713, "movie_count": 14}]}}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p>Below moving on to address director questions by merging dataframes, as well as to filter and loc.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#import dataframes</span>
+<span class="n">directors</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/disney-director.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">directors</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<span class="n">directors</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 56 entries, 0 to 55
+Data columns (total 2 columns):
+ #   Column    Non-Null Count  Dtype 
+---  ------    --------------  ----- 
+ 0   name      56 non-null     object
+ 1   director  56 non-null     object
+dtypes: object(2)
+memory usage: 1.0+ KB
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>director</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Snow White and the Seven Dwarfs</td>
+      <td>David Hand</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Pinocchio</td>
+      <td>Ben Sharpsteen</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Fantasia</td>
+      <td>full credits</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Dumbo</td>
+      <td>Ben Sharpsteen</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Bambi</td>
+      <td>David Hand</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<figure class="align-default" id="snowwhite">
+<a class="reference internal image-reference" href="_images/snowwhite.jpeg"><img alt="_images/snowwhite.jpeg" src="_images/snowwhite.jpeg" style="height: 450px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Based on this dataset, SnowWhite ranks top by inflation adjusted revenue.</span><a class="headerlink" href="#snowwhite" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Source of image: <a class="reference external" href="https://movies.disney.com/snow-white-and-the-seven-dwarfs">https://movies.disney.com/snow-white-and-the-seven-dwarfs</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># I filtered for the years I cared about</span>
+<span class="n">dm_loc</span> <span class="o">=</span> <span class="n">dm_total_gross</span><span class="p">[</span><span class="n">dm_total_gross</span><span class="p">[</span><span class="s1">&#39;release_year&#39;</span><span class="p">]</span><span class="o">&gt;=</span> <span class="mi">1972</span><span class="p">]</span>
+<span class="n">dm_loc</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>movie_title</th>
+      <th>release_date</th>
+      <th>genre</th>
+      <th>MPAA_rating</th>
+      <th>total_gross</th>
+      <th>inflation_adjusted_gross</th>
+      <th>release_year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>18</th>
+      <td>The Apple Dumpling Gang</td>
+      <td>1975-07-01</td>
+      <td>Comedy</td>
+      <td>NaN</td>
+      <td>31916500.00</td>
+      <td>131246872.00</td>
+      <td>1975</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>Freaky Friday</td>
+      <td>1977-01-21</td>
+      <td>Comedy</td>
+      <td>NaN</td>
+      <td>25942000.00</td>
+      <td>98067733.00</td>
+      <td>1977</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>The Many Adventures of Winnie the Pooh</td>
+      <td>1977-03-11</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>1977</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>The Rescuers</td>
+      <td>1977-06-22</td>
+      <td>Adventure</td>
+      <td>NaN</td>
+      <td>48775599.00</td>
+      <td>159743914.00</td>
+      <td>1977</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>Herbie Goes to Monte Carlo</td>
+      <td>1977-06-24</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>28000000.00</td>
+      <td>105847527.00</td>
+      <td>1977</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">merged</span> <span class="o">=</span> <span class="n">dm_loc</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">directors</span><span class="p">,</span> <span class="n">left_on</span> <span class="o">=</span> <span class="s1">&#39;movie_title&#39;</span><span class="p">,</span> <span class="n">right_on</span> <span class="o">=</span> <span class="s1">&#39;name&#39;</span><span class="p">)</span>
+<span class="n">merged</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>movie_title</th>
+      <th>release_date</th>
+      <th>genre</th>
+      <th>MPAA_rating</th>
+      <th>total_gross</th>
+      <th>inflation_adjusted_gross</th>
+      <th>release_year</th>
+      <th>name</th>
+      <th>director</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>The Many Adventures of Winnie the Pooh</td>
+      <td>1977-03-11</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>1977</td>
+      <td>The Many Adventures of Winnie the Pooh</td>
+      <td>Wolfgang Reitherman</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>The Rescuers</td>
+      <td>1977-06-22</td>
+      <td>Adventure</td>
+      <td>NaN</td>
+      <td>48775599.00</td>
+      <td>159743914.00</td>
+      <td>1977</td>
+      <td>The Rescuers</td>
+      <td>Wolfgang Reitherman</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>The Fox and the Hound</td>
+      <td>1981-07-10</td>
+      <td>Comedy</td>
+      <td>NaN</td>
+      <td>43899231.00</td>
+      <td>133118889.00</td>
+      <td>1981</td>
+      <td>The Fox and the Hound</td>
+      <td>Art Stevens</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>The Black Cauldron</td>
+      <td>1985-07-24</td>
+      <td>Adventure</td>
+      <td>NaN</td>
+      <td>21288692.00</td>
+      <td>50553142.00</td>
+      <td>1985</td>
+      <td>The Black Cauldron</td>
+      <td>Ted Berman</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>The Great Mouse Detective</td>
+      <td>1986-07-02</td>
+      <td>Adventure</td>
+      <td>NaN</td>
+      <td>23605534.00</td>
+      <td>53637367.00</td>
+      <td>1986</td>
+      <td>The Great Mouse Detective</td>
+      <td>Ron Clements</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import the custom script</span>
+<span class="kn">from</span> <span class="nn">custom_filter</span> <span class="kn">import</span> <span class="n">custom_filter</span> 
+
+<span class="c1"># run it on the data</span>
+<span class="n">Top10_dir</span> <span class="o">=</span> <span class="n">custom_filter</span><span class="p">(</span><span class="s1">&#39;MPAA_rating&#39;</span><span class="p">,</span><span class="s1">&#39;G&#39;</span><span class="p">,</span><span class="s1">&#39;inflation_adjusted_gross&#39;</span><span class="p">,</span><span class="n">merged</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">Top10_dir</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>movie_title</th>
+      <th>release_date</th>
+      <th>genre</th>
+      <th>MPAA_rating</th>
+      <th>total_gross</th>
+      <th>inflation_adjusted_gross</th>
+      <th>release_year</th>
+      <th>name</th>
+      <th>director</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>10</th>
+      <td>The Lion King</td>
+      <td>1994-06-15</td>
+      <td>Adventure</td>
+      <td>G</td>
+      <td>422780140.00</td>
+      <td>761640898.00</td>
+      <td>1994</td>
+      <td>The Lion King</td>
+      <td>Roger Allers</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Aladdin</td>
+      <td>1992-11-11</td>
+      <td>Comedy</td>
+      <td>G</td>
+      <td>217350219.00</td>
+      <td>441969178.00</td>
+      <td>1992</td>
+      <td>Aladdin</td>
+      <td>Ron Clements</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Beauty and the Beast</td>
+      <td>1991-11-13</td>
+      <td>Musical</td>
+      <td>G</td>
+      <td>218951625.00</td>
+      <td>363017667.00</td>
+      <td>1991</td>
+      <td>Beauty and the Beast</td>
+      <td>Gary Trousdale</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Tarzan</td>
+      <td>1999-06-16</td>
+      <td>Adventure</td>
+      <td>G</td>
+      <td>171091819.00</td>
+      <td>283900254.00</td>
+      <td>1999</td>
+      <td>Tarzan</td>
+      <td>Chris Buck</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Pocahontas</td>
+      <td>1995-06-10</td>
+      <td>Adventure</td>
+      <td>G</td>
+      <td>141579773.00</td>
+      <td>274370957.00</td>
+      <td>1995</td>
+      <td>Pocahontas</td>
+      <td>Mike Gabriel</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>101 Dalmatians</td>
+      <td>1996-11-27</td>
+      <td>Comedy</td>
+      <td>G</td>
+      <td>136189294.00</td>
+      <td>258728898.00</td>
+      <td>1996</td>
+      <td>101 Dalmatians</td>
+      <td>Wolfgang Reitherman</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>The Little Mermaid</td>
+      <td>1989-11-15</td>
+      <td>Adventure</td>
+      <td>G</td>
+      <td>111543479.00</td>
+      <td>223726012.00</td>
+      <td>1989</td>
+      <td>The Little Mermaid</td>
+      <td>Ron Clements</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Mulan</td>
+      <td>1998-06-19</td>
+      <td>Adventure</td>
+      <td>G</td>
+      <td>120620254.00</td>
+      <td>216807832.00</td>
+      <td>1998</td>
+      <td>Mulan</td>
+      <td>Barry Cook</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>The Hunchback of Notre Dame</td>
+      <td>1996-06-21</td>
+      <td>Adventure</td>
+      <td>G</td>
+      <td>100138851.00</td>
+      <td>190988799.00</td>
+      <td>1996</td>
+      <td>The Hunchback of Notre Dame</td>
+      <td>Gary Trousdale</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Hercules</td>
+      <td>1997-06-13</td>
+      <td>Adventure</td>
+      <td>G</td>
+      <td>99112101.00</td>
+      <td>182029412.00</td>
+      <td>1997</td>
+      <td>Hercules</td>
+      <td>Ron Clements</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#formatting</span>
+
+<span class="o">!</span>black custom_filter.py
+<span class="o">!</span>black notebooks.ipynb
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">All done! ✨ 🍰 ✨</span>
+<span class=" -Color -Color-Blue">1 file </span>left unchanged.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Usage: black [OPTIONS] SRC ...
+Try &#39;black -h&#39; for help.
+
+Error: Invalid value for &#39;SRC ...&#39;: Path &#39;notebooks.ipynb&#39; does not exist.
+</pre></div>
+</div>
+</div>
+</div>
+<figure class="align-default" id="lionking">
+<a class="reference internal image-reference" href="_images/lion-king.webp"><img alt="_images/lion-king.webp" src="_images/lion-king.webp" style="height: 450px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Lion King is another major success of Disney</span><a class="headerlink" href="#lionking" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Source of image: <a class="reference external" href="https://www.nytimes.com/2019/07/18/movies/disney-lion-king.html">https://www.nytimes.com/2019/07/18/movies/disney-lion-king.html</a></p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Now, since there really isn’t any math equations this project needed, but the Jupyter Book demands two math equations… I thought I’d insert two simple equations brought up in this article <a class="reference external" href="http://pleasemakeanote.blogspot.com/2010/10/mathematics-of-fstop-aperture-numbers.html">The Mathematics of f/stop Aperture Numbers</a>, below are the equations re-produced based on this source.</p>
+</div>
+<p>Code as below:</p>
+<div class="math notranslate nohighlight" id="equation-stop-cal">
+<span class="eqno">(5)<a class="headerlink" href="#equation-stop-cal" title="Permalink to this equation">#</a></span>\[  S = \frac {f}{D}\]</div>
+<div class="math notranslate nohighlight" id="equation-diameter-cal">
+<span class="eqno">(6)<a class="headerlink" href="#equation-diameter-cal" title="Permalink to this equation">#</a></span>\[  D = \frac {f}{D}\]</div>
+<p>where
+S = stop number;
+f = Focal Length;
+D = Aperture Diameter.</p>
+<p>To quote an example from the source, “a lens set at a focal length of 70mm and a stop number of 5.6 has an aperture diameter of 12.5mm.”</p>
+<p>Additionally, “for an aperture to let in twice as much light, its diameter must increase by approximately 41%.” As shown in this equation below.</p>
+<div class="math notranslate nohighlight" id="equation-diameter-incr">
+<span class="eqno">(7)<a class="headerlink" href="#equation-diameter-incr" title="Permalink to this equation">#</a></span>\[  {D_0} = \sqrt{2}{D_1} \approx {D_1} + 0.414{D_1}\]</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="notebook1.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Question 1</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="markdown2.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Conclusions</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Cathy Chen<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

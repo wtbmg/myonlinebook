@@ -1,0 +1,958 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Question 1 &#8212; Python for Data Science Course Final Project</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Question 2" href="notebook2.html" />
+    <link rel="prev" title="Exploratory Data Analysis of a Disney Dataset" href="markdown1.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Python for Data Science Course Final Project</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Python for Data Science Course Final Project
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown1.html">
+   Dataset Description &amp; Questions of Interests
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Question1 and Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebook2.html">
+   Question2 and Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown2.html">
+   Conclusions
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/notebook1.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebook1.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/notebook1.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Question 1</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="question-1">
+<h1>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">#</a></h1>
+<p>Based on existing data, which section(s) inside Disney is/are generating more/less revenue over the years of 1991-2006? Is there a trend?</p>
+<p><strong>Methods and Results</strong></p>
+<p>To answer Q1:
+uses only disney_revenue_1991-2016.csv, melt the sections so I can do a plot of each section over the years.</p>
+<figure class="align-default" id="disney-brands">
+<a class="reference internal image-reference" href="_images/disney-brands.png"><img alt="_images/disney-brands.png" src="_images/disney-brands.png" style="height: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Here’s an image from <a class="reference external" href="https://lifebeginsatdisney.weebly.com/family-brands.html">Disney website</a> demonstrating its various brands.</span><a class="headerlink" href="#disney-brands" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import potentially useful files</span>
+<span class="n">revenues</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/disney_revenue_1991-2016.csv&#39;</span><span class="p">)</span>
+<span class="n">revenues</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Year</th>
+      <th>Studio Entertainment[NI 1]</th>
+      <th>Disney Consumer Products[NI 2]</th>
+      <th>Disney Interactive[NI 3][Rev 1]</th>
+      <th>Walt Disney Parks and Resorts</th>
+      <th>Disney Media Networks</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1991</td>
+      <td>2593.0</td>
+      <td>724.0</td>
+      <td>NaN</td>
+      <td>2794.0</td>
+      <td>NaN</td>
+      <td>6111</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1992</td>
+      <td>3115.0</td>
+      <td>1081.0</td>
+      <td>NaN</td>
+      <td>3306.0</td>
+      <td>NaN</td>
+      <td>7502</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1993</td>
+      <td>3673.4</td>
+      <td>1415.1</td>
+      <td>NaN</td>
+      <td>3440.7</td>
+      <td>NaN</td>
+      <td>8529</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1994</td>
+      <td>4793.0</td>
+      <td>1798.2</td>
+      <td>NaN</td>
+      <td>3463.6</td>
+      <td>359</td>
+      <td>10414</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1995</td>
+      <td>6001.5</td>
+      <td>2150.0</td>
+      <td>NaN</td>
+      <td>3959.8</td>
+      <td>414</td>
+      <td>12525</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<figure class="align-default" id="disney-interactive">
+<a class="reference internal image-reference" href="_images/Disney_Interactive_Logo.png"><img alt="_images/Disney_Interactive_Logo.png" src="_images/Disney_Interactive_Logo.png" style="height: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Disney Interactive</span><a class="headerlink" href="#disney-interactive" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Figure 4 above is a logo of Disney Interactive. Look closer at <a class="reference internal" href="#disney-brands"><span class="std std-numref">Fig. 3</span></a> you’ll notice a Disney Interactive Studio, which appears to be part of Disney Interactive over times.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># drop Disney Interactive as a category for comparison, due to more than half of NaN values in the column</span>
+<span class="c1"># also drop other years with NaN values </span>
+
+<span class="n">revenues1</span> <span class="o">=</span> <span class="n">revenues</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="s1">&#39;Disney Interactive[NI 3][Rev 1]&#39;</span><span class="p">)</span>
+<span class="n">revenues1</span> <span class="o">=</span> <span class="n">revenues1</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+<span class="n">revenues1</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Int64Index: 21 entries, 3 to 24
+Data columns (total 6 columns):
+ #   Column                          Non-Null Count  Dtype  
+---  ------                          --------------  -----  
+ 0   Year                            21 non-null     int64  
+ 1   Studio Entertainment[NI 1]      21 non-null     float64
+ 2   Disney Consumer Products[NI 2]  21 non-null     float64
+ 3   Walt Disney Parks and Resorts   21 non-null     float64
+ 4   Disney Media Networks           21 non-null     object 
+ 5   Total                           21 non-null     int64  
+dtypes: float64(3), int64(2), object(1)
+memory usage: 1.1+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<p>Just as a note, my approach to NaN values here is to drop them. As we’ve learned in the python class, alternatives to dropping NaN values is to use the values from preceding or following years.</p>
+<p>To cite <a class="reference external" href="https://medium.com/&#64;dkatzman_3920/how-to-deal-with-missing-or-na-values-in-the-dataset-7d8f1693450d">this source</a> <span id="id1">[<a class="reference internal" href="markdown2.html#id4" title="David Katzman. How to deal with missing or na values in the dataset. In Medium. https://medium.com/&#64;dkatzman_3920, 2021.">Kat21</a>]</span>: “it often times may make more sense instead to use more mathematical ways of imputing missing values. For instance, it may make sense to impute some sort of summary statistic for that variable, whether it be the mean, median, or mode for a continuous variable, or the mode for a categorical variable.”</p>
+<p>Hence, the code cells below show what code we can use, if we there to adopt these approaches.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">revenues_bfill</span> <span class="o">=</span> <span class="n">revenues</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;bfill&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">revenues_ffill</span> <span class="o">=</span> <span class="n">revenues</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;ffill&#39;</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">revenues1</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s1">&#39;max&#39;</span><span class="p">,</span><span class="s1">&#39;min&#39;</span><span class="p">,</span><span class="s1">&#39;median&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Year</th>
+      <th>Studio Entertainment[NI 1]</th>
+      <th>Disney Consumer Products[NI 2]</th>
+      <th>Walt Disney Parks and Resorts</th>
+      <th>Disney Media Networks</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>max</th>
+      <td>2015.0</td>
+      <td>8713.0</td>
+      <td>4499.0</td>
+      <td>16162.0</td>
+      <td>9733</td>
+      <td>52465.0</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>1994.0</td>
+      <td>4793.0</td>
+      <td>1798.2</td>
+      <td>3463.6</td>
+      <td>10941</td>
+      <td>10414.0</td>
+    </tr>
+    <tr>
+      <th>median</th>
+      <td>2005.0</td>
+      <td>6849.0</td>
+      <td>2590.0</td>
+      <td>9023.0</td>
+      <td>13207.0</td>
+      <td>31944.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#renamed column for plotting as special character is causing the plot column to be unreadable earlier</span>
+<span class="n">revenues1</span> <span class="o">=</span> <span class="n">revenues1</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Studio Entertainment[NI 1]&#39;</span><span class="p">:</span><span class="s1">&#39;Studio EntertainmentNI 1&#39;</span><span class="p">,</span> <span class="s1">&#39;Disney Consumer Products[NI 2]&#39;</span><span class="p">:</span><span class="s1">&#39;Disney Consumer ProductsNI 2&#39;</span><span class="p">})</span>
+
+<span class="c1">#change dtype for Disney Media Networks to float</span>
+<span class="n">revenues1</span> <span class="o">=</span> <span class="n">revenues1</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Disney Media Networks&#39;</span><span class="p">:</span><span class="s1">&#39;Disney_Media_Networks&#39;</span><span class="p">})</span>
+<span class="n">revenues1</span> <span class="o">=</span> <span class="n">revenues1</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Disney_Media_Networks</span> <span class="o">=</span> <span class="n">revenues1</span><span class="p">[</span><span class="s1">&#39;Disney_Media_Networks&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float&#39;</span><span class="p">))</span>
+
+                        
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#melt revenues section columns so they can be plotted on the same chart for visual comparison </span>
+<span class="n">melted_revenues1</span> <span class="o">=</span> <span class="p">(</span><span class="n">revenues1</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">id_vars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">],</span>
+        <span class="n">value_vars</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Studio EntertainmentNI 1&#39;</span><span class="p">,</span> <span class="s1">&#39;Disney Consumer ProductsNI 2&#39;</span><span class="p">,</span> <span class="s1">&#39;Walt Disney Parks and Resorts&#39;</span><span class="p">,</span> <span class="s1">&#39;Disney_Media_Networks&#39;</span><span class="p">],</span>
+        <span class="n">var_name</span> <span class="o">=</span> <span class="s1">&#39;Sections&#39;</span><span class="p">,</span>
+        <span class="n">value_name</span> <span class="o">=</span> <span class="s1">&#39;value&#39;</span><span class="p">))</span>
+<span class="n">melted_revenues1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Year</th>
+      <th>Sections</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1994</td>
+      <td>Studio EntertainmentNI 1</td>
+      <td>4793.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1995</td>
+      <td>Studio EntertainmentNI 1</td>
+      <td>6001.5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1997</td>
+      <td>Studio EntertainmentNI 1</td>
+      <td>6981.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1998</td>
+      <td>Studio EntertainmentNI 1</td>
+      <td>6849.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1999</td>
+      <td>Studio EntertainmentNI 1</td>
+      <td>6548.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>79</th>
+      <td>2011</td>
+      <td>Disney_Media_Networks</td>
+      <td>18714.0</td>
+    </tr>
+    <tr>
+      <th>80</th>
+      <td>2012</td>
+      <td>Disney_Media_Networks</td>
+      <td>19436.0</td>
+    </tr>
+    <tr>
+      <th>81</th>
+      <td>2013</td>
+      <td>Disney_Media_Networks</td>
+      <td>20356.0</td>
+    </tr>
+    <tr>
+      <th>82</th>
+      <td>2014</td>
+      <td>Disney_Media_Networks</td>
+      <td>21152.0</td>
+    </tr>
+    <tr>
+      <th>83</th>
+      <td>2015</td>
+      <td>Disney_Media_Networks</td>
+      <td>23264.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>84 rows × 3 columns</p>
+</div></div></div>
+</div>
+<p>Below is a plot generalized to show melted revenues changes over time.</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plotM</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">melted_revenues1</span><span class="p">)</span><span class="o">.</span><span class="n">mark_line</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;Year:Q&#39;</span><span class="p">,</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;value:Q&#39;</span><span class="p">,</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;Sections:N&#39;</span>
+<span class="p">)</span>
+<span class="n">plotM</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-226b3a04b94f4ab3977432de6aaed20a"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-226b3a04b94f4ab3977432de6aaed20a") {
+      outputDiv = document.getElementById("altair-viz-226b3a04b94f4ab3977432de6aaed20a");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.17.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "4.17.0"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-7d39e4e20bf5cc5caccb968f4398009e"}, "mark": "line", "encoding": {"color": {"field": "Sections", "type": "nominal"}, "x": {"field": "Year", "type": "quantitative"}, "y": {"field": "value", "type": "quantitative"}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-7d39e4e20bf5cc5caccb968f4398009e": [{"Year": 1994, "Sections": "Studio EntertainmentNI 1", "value": 4793.0}, {"Year": 1995, "Sections": "Studio EntertainmentNI 1", "value": 6001.5}, {"Year": 1997, "Sections": "Studio EntertainmentNI 1", "value": 6981.0}, {"Year": 1998, "Sections": "Studio EntertainmentNI 1", "value": 6849.0}, {"Year": 1999, "Sections": "Studio EntertainmentNI 1", "value": 6548.0}, {"Year": 2000, "Sections": "Studio EntertainmentNI 1", "value": 5994.0}, {"Year": 2001, "Sections": "Studio EntertainmentNI 1", "value": 7004.0}, {"Year": 2002, "Sections": "Studio EntertainmentNI 1", "value": 6465.0}, {"Year": 2003, "Sections": "Studio EntertainmentNI 1", "value": 7364.0}, {"Year": 2004, "Sections": "Studio EntertainmentNI 1", "value": 8713.0}, {"Year": 2005, "Sections": "Studio EntertainmentNI 1", "value": 7587.0}, {"Year": 2006, "Sections": "Studio EntertainmentNI 1", "value": 7529.0}, {"Year": 2007, "Sections": "Studio EntertainmentNI 1", "value": 7491.0}, {"Year": 2008, "Sections": "Studio EntertainmentNI 1", "value": 7348.0}, {"Year": 2009, "Sections": "Studio EntertainmentNI 1", "value": 6136.0}, {"Year": 2010, "Sections": "Studio EntertainmentNI 1", "value": 6701.0}, {"Year": 2011, "Sections": "Studio EntertainmentNI 1", "value": 6351.0}, {"Year": 2012, "Sections": "Studio EntertainmentNI 1", "value": 5825.0}, {"Year": 2013, "Sections": "Studio EntertainmentNI 1", "value": 5979.0}, {"Year": 2014, "Sections": "Studio EntertainmentNI 1", "value": 7278.0}, {"Year": 2015, "Sections": "Studio EntertainmentNI 1", "value": 7366.0}, {"Year": 1994, "Sections": "Disney Consumer ProductsNI 2", "value": 1798.2}, {"Year": 1995, "Sections": "Disney Consumer ProductsNI 2", "value": 2150.0}, {"Year": 1997, "Sections": "Disney Consumer ProductsNI 2", "value": 3782.0}, {"Year": 1998, "Sections": "Disney Consumer ProductsNI 2", "value": 3193.0}, {"Year": 1999, "Sections": "Disney Consumer ProductsNI 2", "value": 3030.0}, {"Year": 2000, "Sections": "Disney Consumer ProductsNI 2", "value": 2602.0}, {"Year": 2001, "Sections": "Disney Consumer ProductsNI 2", "value": 2590.0}, {"Year": 2002, "Sections": "Disney Consumer ProductsNI 2", "value": 2440.0}, {"Year": 2003, "Sections": "Disney Consumer ProductsNI 2", "value": 2344.0}, {"Year": 2004, "Sections": "Disney Consumer ProductsNI 2", "value": 2511.0}, {"Year": 2005, "Sections": "Disney Consumer ProductsNI 2", "value": 2127.0}, {"Year": 2006, "Sections": "Disney Consumer ProductsNI 2", "value": 2193.0}, {"Year": 2007, "Sections": "Disney Consumer ProductsNI 2", "value": 2347.0}, {"Year": 2008, "Sections": "Disney Consumer ProductsNI 2", "value": 2415.0}, {"Year": 2009, "Sections": "Disney Consumer ProductsNI 2", "value": 2425.0}, {"Year": 2010, "Sections": "Disney Consumer ProductsNI 2", "value": 2678.0}, {"Year": 2011, "Sections": "Disney Consumer ProductsNI 2", "value": 3049.0}, {"Year": 2012, "Sections": "Disney Consumer ProductsNI 2", "value": 3252.0}, {"Year": 2013, "Sections": "Disney Consumer ProductsNI 2", "value": 3555.0}, {"Year": 2014, "Sections": "Disney Consumer ProductsNI 2", "value": 3985.0}, {"Year": 2015, "Sections": "Disney Consumer ProductsNI 2", "value": 4499.0}, {"Year": 1994, "Sections": "Walt Disney Parks and Resorts", "value": 3463.6}, {"Year": 1995, "Sections": "Walt Disney Parks and Resorts", "value": 3959.8}, {"Year": 1997, "Sections": "Walt Disney Parks and Resorts", "value": 5014.0}, {"Year": 1998, "Sections": "Walt Disney Parks and Resorts", "value": 5532.0}, {"Year": 1999, "Sections": "Walt Disney Parks and Resorts", "value": 6106.0}, {"Year": 2000, "Sections": "Walt Disney Parks and Resorts", "value": 6803.0}, {"Year": 2001, "Sections": "Walt Disney Parks and Resorts", "value": 6009.0}, {"Year": 2002, "Sections": "Walt Disney Parks and Resorts", "value": 6691.0}, {"Year": 2003, "Sections": "Walt Disney Parks and Resorts", "value": 6412.0}, {"Year": 2004, "Sections": "Walt Disney Parks and Resorts", "value": 7750.0}, {"Year": 2005, "Sections": "Walt Disney Parks and Resorts", "value": 9023.0}, {"Year": 2006, "Sections": "Walt Disney Parks and Resorts", "value": 9925.0}, {"Year": 2007, "Sections": "Walt Disney Parks and Resorts", "value": 10626.0}, {"Year": 2008, "Sections": "Walt Disney Parks and Resorts", "value": 11504.0}, {"Year": 2009, "Sections": "Walt Disney Parks and Resorts", "value": 10667.0}, {"Year": 2010, "Sections": "Walt Disney Parks and Resorts", "value": 10761.0}, {"Year": 2011, "Sections": "Walt Disney Parks and Resorts", "value": 11797.0}, {"Year": 2012, "Sections": "Walt Disney Parks and Resorts", "value": 12920.0}, {"Year": 2013, "Sections": "Walt Disney Parks and Resorts", "value": 14087.0}, {"Year": 2014, "Sections": "Walt Disney Parks and Resorts", "value": 15099.0}, {"Year": 2015, "Sections": "Walt Disney Parks and Resorts", "value": 16162.0}, {"Year": 1994, "Sections": "Disney_Media_Networks", "value": 359.0}, {"Year": 1995, "Sections": "Disney_Media_Networks", "value": 414.0}, {"Year": 1997, "Sections": "Disney_Media_Networks", "value": 6522.0}, {"Year": 1998, "Sections": "Disney_Media_Networks", "value": 7142.0}, {"Year": 1999, "Sections": "Disney_Media_Networks", "value": 7512.0}, {"Year": 2000, "Sections": "Disney_Media_Networks", "value": 9615.0}, {"Year": 2001, "Sections": "Disney_Media_Networks", "value": 9569.0}, {"Year": 2002, "Sections": "Disney_Media_Networks", "value": 9733.0}, {"Year": 2003, "Sections": "Disney_Media_Networks", "value": 10941.0}, {"Year": 2004, "Sections": "Disney_Media_Networks", "value": 11778.0}, {"Year": 2005, "Sections": "Disney_Media_Networks", "value": 13207.0}, {"Year": 2006, "Sections": "Disney_Media_Networks", "value": 14368.0}, {"Year": 2007, "Sections": "Disney_Media_Networks", "value": 15046.0}, {"Year": 2008, "Sections": "Disney_Media_Networks", "value": 15857.0}, {"Year": 2009, "Sections": "Disney_Media_Networks", "value": 16209.0}, {"Year": 2010, "Sections": "Disney_Media_Networks", "value": 17162.0}, {"Year": 2011, "Sections": "Disney_Media_Networks", "value": 18714.0}, {"Year": 2012, "Sections": "Disney_Media_Networks", "value": 19436.0}, {"Year": 2013, "Sections": "Disney_Media_Networks", "value": 20356.0}, {"Year": 2014, "Sections": "Disney_Media_Networks", "value": 21152.0}, {"Year": 2015, "Sections": "Disney_Media_Networks", "value": 23264.0}]}}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A bar chart showing averages for these years</span>
+<span class="n">barMean</span> <span class="o">=</span> <span class="n">melted_revenues1</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Sections&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">&#39;value&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">barMean</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sections</th>
+      <th>Year</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Disney Consumer ProductsNI 2</td>
+      <td>2004.904762</td>
+      <td>2807.866667</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Disney_Media_Networks</td>
+      <td>2004.904762</td>
+      <td>12778.857143</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Studio EntertainmentNI 1</td>
+      <td>2004.904762</td>
+      <td>6776.357143</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Walt Disney Parks and Resorts</td>
+      <td>2004.904762</td>
+      <td>9062.447619</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">barMean</span><span class="p">)</span><span class="o">.</span><span class="n">mark_bar</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;value&#39;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Sections&#39;</span><span class="p">,</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;Sections&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<div id="altair-viz-42d691fc7a8e445aa64616d5232f86d4"></div>
+<script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-42d691fc7a8e445aa64616d5232f86d4") {
+      outputDiv = document.getElementById("altair-viz-42d691fc7a8e445aa64616d5232f86d4");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.17.0?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else {
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "4.17.0"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-bced2895ac2fe689103b075b9f15a97c"}, "mark": "bar", "encoding": {"color": {"field": "Sections", "type": "nominal"}, "x": {"field": "value", "type": "quantitative"}, "y": {"field": "Sections", "type": "nominal"}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-bced2895ac2fe689103b075b9f15a97c": [{"Sections": "Disney Consumer ProductsNI 2", "Year": 2004.904761904762, "value": 2807.8666666666663}, {"Sections": "Disney_Media_Networks", "Year": 2004.904761904762, "value": 12778.857142857143}, {"Sections": "Studio EntertainmentNI 1", "Year": 2004.904761904762, "value": 6776.357142857143}, {"Sections": "Walt Disney Parks and Resorts", "Year": 2004.904761904762, "value": 9062.447619047618}]}}, {"mode": "vega-lite"});
+</script></div></div>
+</div>
+<p>As indicated by the graph, after excluding Interactive section due to lack of data, for years without NaN data, sections that demonstrate steady growth are Media Networkss and Consumer Products. Studio Entertainment, which appears to be where the animated movies fall under (at least for box office, if not re-production of the movie copyright), seems to be more or less stagnant in growth.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Did you pay attention to the differences in revenue and net revenue? Well, I most certainly did not when I was creating this project. Hence, just to clarify, the most revenue generating may not equal to the most ‘profiting’. See below a simple equation for explanation from this source(<a class="reference external" href="https://www.investopedia.com/terms/r/revenue.asp">https://www.investopedia.com/terms/r/revenue.asp</a>), <span id="id2">[<a class="reference internal" href="markdown2.html#id5" title="Adam Hayes. Hat is revenue? definition, formula, calculation, and example. In Investopedia. https://www.investopedia.com/terms/r/revenue.asp, 2022.">Hay22</a>]</span></p>
+</div>
+<div class="math notranslate nohighlight" id="equation-revenue">
+<span class="eqno">(3)<a class="headerlink" href="#equation-revenue" title="Permalink to this equation">#</a></span>\[  Revenue = ({Quantity~Sold}\times{Unit~Price})\]</div>
+<div class="math notranslate nohighlight" id="equation-net-revenue">
+<span class="eqno">(4)<a class="headerlink" href="#equation-net-revenue" title="Permalink to this equation">#</a></span>\[  Net~Revenue = ({Quantity~Sold}\times{Unit~Price})-{Discounts}-{Allowances}-{Returns}\]</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="markdown1.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Exploratory Data Analysis of a Disney Dataset</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="notebook2.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Question 2</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Cathy Chen<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

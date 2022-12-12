@@ -1,0 +1,542 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Conclusions &#8212; Python for Data Science Course Final Project</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Question 2" href="notebook2.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Python for Data Science Course Final Project</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Python for Data Science Course Final Project
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown1.html">
+   Dataset Description &amp; Questions of Interests
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebook1.html">
+   Question1 and Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebook2.html">
+   Question2 and Analysis
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Conclusions
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fmarkdown2.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/markdown2.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#on-question-1">
+   On Question 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#on-question-2">
+   On Question 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reference-to-figures-equations">
+   Reference to figures &amp; equations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#end-of-jupyter-book">
+   End of Jupyter Book
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Conclusions</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#on-question-1">
+   On Question 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#on-question-2">
+   On Question 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reference-to-figures-equations">
+   Reference to figures &amp; equations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#end-of-jupyter-book">
+   End of Jupyter Book
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="conclusions">
+<h1>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this headline">#</a></h1>
+<section id="on-question-1">
+<h2>On Question 1<a class="headerlink" href="#on-question-1" title="Permalink to this headline">#</a></h2>
+<p>The analysis on question 1 talked about the limitations of the dataset pulled from this other project. Further more, see note below on how NaN was handled.</p>
+<p>After looking at data, Disney Interactive column was dropped due to more than half of the column being NaN value - it represents a smaller sector of the total income anyways. Any rows with NaN values in other columns are dropped before generating the plot to visualize revenues over-time. A melt function was used so all the discussed sections can be presented on the same plot for visual comparison.</p>
+<p>I was slightly surprised to see the Studio Entertainment plateauing, while the other sections more or less increasing over time. To my understanding, the animated movie data presented in the rest of the datasheet falls under this category. Therefore, it natually raise the second question in this project - the question of how the movie perform in gross revenues over time, and the expectations would be they did not perform as well. I also had to raise this second question due to me not finding a portion of the first question that can be put into a meaningful function.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"><strong>Did you know?</strong></p>
+<p>Walter Disney just released their Quarter 4 earning for FY2022 - reporting a 23% increase in revenues. See <a class="reference external" href="https://thewaltdisneycompany.com/app/uploads/2022/11/q4-fy22-earnings.pdf">source from their website</a>.</p>
+</aside>
+</section>
+<section id="on-question-2">
+<h2>On Question 2<a class="headerlink" href="#on-question-2" title="Permalink to this headline">#</a></h2>
+<p>As mentioned previously, the expectation is movies are generating less revenue over time for Disney.</p>
+<p>After visualizing the movies’ average gross by year, as well as the number of movies produced each year, it shows that: 1937 with movie Snow White and the Seven Dwarfs, is so high in gross that it may make the downward trend more stiff than it could have been without it. It appears that there were some major hits in box office for earlier (pre-1970) fims, after the 1970s, despite increased number of movies produced each year, the average gross for movies have come down. Since 2010, despite decreased number of movies compared to the 1990s, there has been a slight upward trend despite the average box office remain low. This contradicts my expection that newer movies would have been more revenue generating.</p>
+<p>Based on the findings, for the revenue-generating top director question, I set the last half century (1972-2022) as the time frame as I feel there’s more movies produced for analysis, as well as there are less particularly outstanding data points in this range (no box office as high as Snow White and the Seven Dwarfs, for example), so this time frame is more comparable.</p>
+<p>I created a custom filter for the data filtering and loc, as I feel many other slightly different questions could have been raised with the merged data, e.g. which directors generated the top N movies, in a particular or all MPAA ratings and/or under a specific genre. The question itself though, is to look for top 10 directors for G-rated category.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To my future self: Data science apparently involve more math than I’m currently comfortable with. May be a good idea to take up <a class="reference external" href="https://www.coursera.org/learn/datasciencemathskills">a course on math</a>.</p>
+</div>
+<p>For example, some of the math concepts that may be covered by this coursera course according to its syllabus:</p>
+<div class="math notranslate nohighlight" id="equation-bayes-theorem">
+<span class="eqno">(8)<a class="headerlink" href="#equation-bayes-theorem" title="Permalink to this equation">#</a></span>\[  P(A|B) = \frac {P(B|A)\cdot P(A)}{P(B)}\]</div>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Bayes%27_theorem">Formula source</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To my future self: Coding is another apparent barrier to my ability to wrangle data, visual presentation, and present data, so might be a good idea signing up for <a class="reference external" href="https://extendedlearning.ubc.ca/programs/introduction-systematic-program-design-python">a python course</a>.</p>
+</div>
+</section>
+<section id="bibliography">
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">#</a></h2>
+<div class="docutils container" id="id1">
+<dl class="citation">
+<dt class="label" id="id3"><span class="brackets">Dat21</span></dt>
+<dd><p>Sachin Date. How to adjust for inflation in monetary data sets. In <em>Time Series Analysis, Regression and Forecasting</em>. https://timeseriesreasoning.com/contents/inflation-adjustment/, 2021.</p>
+</dd>
+<dt class="label" id="id2"><span class="brackets">Gar18</span></dt>
+<dd><p>Kelly Garrett. Disneyreport. In <em>Disney Character Success</em>. https://data.world/kgarrett/, 2018.</p>
+</dd>
+<dt class="label" id="id5"><span class="brackets">Hay22</span></dt>
+<dd><p>Adam Hayes. Hat is revenue? definition, formula, calculation, and example. In <em>Investopedia</em>. https://www.investopedia.com/terms/r/revenue.asp, 2022.</p>
+</dd>
+<dt class="label" id="id4"><span class="brackets">Kat21</span></dt>
+<dd><p>David Katzman. How to deal with missing or na values in the dataset. In <em>Medium</em>. https://medium.com/&#64;dkatzman_3920, 2021.</p>
+</dd>
+</dl>
+</div>
+</section>
+<section id="reference-to-figures-equations">
+<h2>Reference to figures &amp; equations<a class="headerlink" href="#reference-to-figures-equations" title="Permalink to this headline">#</a></h2>
+<p>For ease of reference:
+<strong>Equations</strong></p>
+<ul class="simple">
+<li><p>Equation <a class="reference internal" href="markdown1.html#equation-inflation-adjustment">(1)</a></p></li>
+<li><p>Equation <a class="reference internal" href="markdown1.html#equation-index-calc">(2)</a></p></li>
+<li><p>Equation <a class="reference internal" href="notebook1.html#equation-revenue">(3)</a></p></li>
+<li><p>Equation <a class="reference internal" href="notebook1.html#equation-net-revenue">(4)</a></p></li>
+<li><p>Equation <a class="reference internal" href="notebook2.html#equation-stop-cal">(5)</a></p></li>
+<li><p>Equation <a class="reference internal" href="notebook2.html#equation-diameter-cal">(6)</a></p></li>
+</ul>
+<p><strong>Figures</strong></p>
+<ul class="simple">
+<li><p>Figure <a class="reference internal" href="markdown1.html#python-logo"><span class="std std-ref">Python Course Logo!</span></a></p></li>
+<li><p>Figure <a class="reference internal" href="markdown1.html#disney-logo"><span class="std std-ref">This dataset focuses on Disney. Wikipedia source</span></a></p></li>
+<li><p>Figure <a class="reference internal" href="notebook1.html#disney-brands"><span class="std std-ref">Here’s an image from Disney website demonstrating its various brands.</span></a></p></li>
+<li><p>Figure <a class="reference internal" href="notebook1.html#disney-interactive"><span class="std std-ref">Disney Interactive</span></a></p></li>
+<li><p>Figure <a class="reference internal" href="notebook2.html#snowwhite"><span class="std std-ref">Based on this dataset, SnowWhite ranks top by inflation adjusted revenue.</span></a></p></li>
+<li><p>Figure <a class="reference internal" href="notebook2.html#lionking"><span class="std std-ref">Lion King is another major success of Disney</span></a></p></li>
+<li><p>Figure <a class="reference internal" href="#toolbox-logo"><span class="std std-ref">Toolbox Course Logo.Logo source.</span></a></p></li>
+<li><p>Figure <a class="reference internal" href="#fireworks"><span class="std std-ref">Yay done!!
+Figure source.</span></a></p></li>
+</ul>
+</section>
+<section id="end-of-jupyter-book">
+<h2>End of Jupyter Book<a class="headerlink" href="#end-of-jupyter-book" title="Permalink to this headline">#</a></h2>
+<p>This page also concludes the end of this Jupyter Book, as final project for the Data Science Toolbox course.</p>
+<figure class="align-default" id="toolbox-logo">
+<a class="reference internal image-reference" href="_images/toolbox_logo.PNG"><img alt="_images/toolbox_logo.PNG" src="_images/toolbox_logo.PNG" style="height: 250px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Toolbox Course Logo.<a class="reference external" href="https://toolbox-learn.mds.ubc.ca/en/">Logo source</a>.</span><a class="headerlink" href="#toolbox-logo" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="fireworks">
+<a class="reference internal image-reference" href="_images/fireworks.jpeg"><img alt="_images/fireworks.jpeg" src="_images/fireworks.jpeg" style="height: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Yay done!!
+<a class="reference external" href="https://www.porthope.ca/en/living-here/fireworks.aspx">Figure source</a>.</span><a class="headerlink" href="#fireworks" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="notebook2.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Question 2</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Cathy Chen<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
