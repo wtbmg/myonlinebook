@@ -1,4 +1,4 @@
-# Exploratory Data Analysis of a Disney Dataset
+# Exploratory Data Analysis of A Disney Dataset
 
 ```{figure} python-course-logo.png
 ---
