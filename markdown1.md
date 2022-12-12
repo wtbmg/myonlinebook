@@ -21,16 +21,14 @@ Disney+ cannot be streamed on TVs that do not come with Disney+ app pre-installe
 height: 150px
 name: disney-logo
 ---
-This dataset focuses on Disney.
+This dataset focuses on Disney. [Wikipedia source](https://en.wikipedia.org/wiki/Disney_logo)
 ```
-Disney logo source: [Wikipedia](https://en.wikipedia.org/wiki/Disney_logo)
-
 
 The dataset has 5 tables, all accessed from [a Disney project on character success](https://data.world/kgarrett/disney-character-success-00-16). Below, information in quotes were taken directly from [this project's analysis report](https://data.world/kgarrett/disney-character-success-00-16/workspace/file?filename=DisneyReport.pdf), {cite:p}`Gar18`. 
 
-- NOT USED FOR ANALYSIS **disney-characters.csv**:'provides a list of Disney animated movies and the hero/villain character names in each movie.' It has these columns: 'movie_title', 'release_date', 'hero', 'villain', and 'song.'
+- `NOT USED FOR ANALYSIS` **disney-characters.csv**:'provides a list of Disney animated movies and the hero/villain character names in each movie.' It has these columns: 'movie_title', 'release_date', 'hero', 'villain', and 'song.'
 - **disney_movies_total_gross.csv**: 'provides a list of Disney movies, and their genre, gross, and MPAA ratings.' The .csv also includes inflation_adjusted_gross as the release dates span a few decades from 1937 to 2016.
-- NOT USED FOR ANALYSIS **disney-voice-actors.csv**: 'provides a complete list of Disney characters and their voice actors.' It has three columns: 'character', 'voice-actor', 'movie'.
+- `NOT USED FOR ANALYSIS` **disney-voice-actors.csv**: 'provides a complete list of Disney characters and their voice actors.' It has three columns: 'character', 'voice-actor', 'movie'.
 - **disney-director.csv**: 'provides a list of Disney animated movies and the director of each movie.' Note that only first director was scraped from the source data according to the website. 
 - **disney_revenue_1991-2016.csv**: 'This is a Disney financial data chart which contains annual gross revenues by sections (includes studio entertainment, parks and resorts, etc.) from 1991-2016.' Note that the units are in million US dollars. 
 
